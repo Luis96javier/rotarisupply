@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotari-Supply | Suministros Metalmecánicos y Rodamientos Industriales</title>
+    <meta name="description" content="Rotari-Supply es tu proveedor de confianza en Punto Fijo, Falcón. Ofrecemos rodamientos SKF, FAG, PFI, sellos mecánicos Sealco, tornillería exacta, bronce, cobre, teflón y hierro para la industria metalmecánica.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container navbar">
+            <div class="logo-area">
+                <img src="logo.jpg" alt="Rotaribomba C.A. Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">ROTARI<span>SUPPLY</span></span>
+                    <span class="logo-tagline">Sucursal de Rotaribomba C.A.</span>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#hero">Inicio</a>
+                <a href="#catalog">Catálogo</a>
+                <a href="#materials">Materiales</a>
+                <a href="#comments-section">Comunidad</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="open-cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Slogan Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="shipping-badge">
+                    <i class="fa-solid fa-truck-fast"></i> Despachos directos desde Punto Fijo, Edo. Falcón
+                </div>
+                <h1 class="hero-title">El Giro Perfecto y la Aleación Precisa para tu Industria</h1>
+                <p class="hero-subtitle">Equipa tus proyectos de metalmecánica con las mejores marcas mundiales en rodamientos, sellos mecánicos y materiales calibrados de nomenclatura exacta.</p>
+                <div class="hero-buttons">
+                    <a href="#catalog" class="btn btn-primary">Ver Catálogo</a>
+                    <a href="https://wa.me/584121062612" target="_blank" class="btn btn-secondary">
+                        <i class="fa-brands fa-whatsapp"></i> Luis Alvarez (Ventas)
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- 3D-like floating abstract mechanical components -->
+                <div class="mech-card card-bearing">
+                    <i class="fa-solid fa-circle-notch bearing-spin"></i>
+                    <h4>RODAMIENTOS</h4>
+                    <p>SKF • FAG • PFI</p>
+                </div>
+                <div class="mech-card card-alloy">
+                    <i class="fa-solid fa-cubes"></i>
+                    <h4>ALEACIONES</h4>
+                    <p>SAE 64 • Cobre • PTFE</p>
+                </div>
+                <div class="mech-card card-seals">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>SELLOS</h4>
+                    <p>Sealco • Especiales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Carousel Section -->
+    <section class="brands-section">
+        <div class="container text-center">
+            <p class="brands-title">Marcas Certificadas y Respaldadas</p>
+            <div class="brands-grid">
+                <div class="brand-item"><img src="skf_logo.png" alt="SKF" class="brand-logo-img"></div>
+                <div class="brand-item"><span>FAG</span></div>
+                <div class="brand-item"><span>PFI</span></div>
+                <div class="brand-item"><img src="sealco_logo.jpg" alt="SEALCO" class="brand-logo-img"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section with Filters -->
+    <section id="catalog" class="catalog-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Catálogo de Suministros</h2>
+                <p>Busca e interactúa con nuestros renglones de venta especializados</p>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="filter-controls">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="product-search" placeholder="Buscar rodamientos, tornillos, materiales...">
+                </div>
+                <div class="filter-tabs">
+                    <button class="tab-btn active" data-category="all">Todos</button>
+                    <button class="tab-btn" data-category="rodamientos">Rodamientos</button>
+                    <button class="tab-btn" data-category="sellos">Sellos Mecánicos</button>
+                    <button class="tab-btn" data-category="tornillos">Tornillos y Arandelas</button>
+                    <button class="tab-btn" data-category="materiales">Materiales</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be generated dynamically by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Specifications Section -->
+    <section id="materials" class="materials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Guía de Nomenclatura Exacta y Aplicaciones</h2>
+                <p>Conoce las especificaciones técnicas y los usos más comunes recomendados de nuestros materiales metalmecánicos</p>
+            </div>
+            
+            <div class="materials-accordion">
+                <!-- Bronce -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="material-name">
+                            <span class="material-color-indicator bronze"></span>
+                            <h3>Bronce (SAE 64 / SAE 660 / SAE 40)</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="spec-grid">
+                            <div class="spec-card">
+                                <strong>Nomenclatura Común:</strong>
+                                <p>SAE 64 (Fosforoso), SAE 660 (Maquinaria General), SAE 40 (Comercial)</p>
+                            </div>
+                            <div class="spec-card">
+                                <strong>Uso Altamente Recomendado:</strong>
+                                <p><span class="highlight">Sistemas de agua salada</span>, bujes de alta velocidad, coronas de sinfín, cojinetes de alta presión y resistencia a la corrosión marina.</p>
+                            </div>
+                            <div class="spec-card">
+                                <strong>Características Clave:</strong>
+                                <p>Excelente maquinabilidad, autolubricación moderada y alta resistencia al desgaste por fricción constante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cobre -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="material-name">
+                            <span class="material-color-indicator copper"></span>
+                            <h3>Cobre (Electrolítico / ASTM B152)</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="spec-grid">
+                            <div class="spec-card">
+                                <strong>Nomenclatura Común:</strong>
+                                <p>C11000 (Electrolítico 99.9% pureza), ASTM B187 (Barras y Perfiles)</p>
+                            </div>
+                            <div class="spec-card">
+                                <strong>Uso Altamente Recomendado:</strong>
+                                <p>Contactores eléctricos de alta potencia, tuberías térmicas, intercambiadores de calor y juntas de alta conductividad.</p>
+                            </div>
+                            <div class="spec-card">
+                                <strong>Características Clave:</strong>
+                                <p>Máxima conductividad térmica y eléctrica, gran ductilidad, fácil de soldar y alta maleabilidad estructural.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teflon -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="material-name">
+                            <span class="material-color-indicator teflon"></span>
+                            <h3>Teflón (PTFE Virgen / PTFE + Carbón)</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="spec-grid">
+                            <div class="spec-card">
+                                <strong>Nomenclatura Común:</strong>
+                                <p>PTFE Virgen, PTFE con Carga de Vidrio o Carbón (mejor rigidez)</p>
+                            </div>
+                            <div class="spec-card">
+                                <strong>Uso Altamente Recomendado:</strong>
+                                <p>Empacaduras de válvulas químicas, asientos de sellos, aislantes criogénicos y piezas sometidas a químicos corrosivos extremos.</p>
+                            </div>
+                            <div class="spec-card">
+                                <strong>Características Clave:</strong>
+                                <p>Coeficiente de fricción extremadamente bajo, antiadherente, soporta desde -200°C hasta 260°C y resiste casi cualquier químico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hierro -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <div class="material-name">
+                            <span class="material-color-indicator iron"></span>
+                            <h3>Hierro (Gris / Nodular / Fundición)</h3>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="spec-grid">
+                            <div class="spec-card">
+                                <strong>Nomenclatura Común:</strong>
+                                <p>Hierro Gris ASTM A48 Clase 30/40, Hierro Nodular (Dúctil) ASTM A536</p>
+                            </div>
+                            <div class="spec-card">
+                                <strong>Uso Altamente Recomendado:</strong>
+                                <p>Bases de máquinas vibratorias, carcasas de bombas y reductores, rodillos industriales y engranajes pesados.</p>
+                            </div>
+                            <div class="spec-card">
+                                <strong>Características Clave:</strong>
+                                <p>Excelente absorción de vibraciones mecánicas (amortiguación), alta resistencia a la compresión y maquinado preciso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section (Interactive) -->
+    <section id="comments-section" class="comments-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Experiencia de Clientes</h2>
+                <p>Nuestra prioridad es tu satisfacción. Deja tu comentario o valoración sobre nuestro servicio</p>
+            </div>
+
+            <div class="comments-container">
+                <!-- Form to leave a comment -->
+                <div class="comment-form-card">
+                    <h3>¿Cómo fue tu experiencia con nosotros?</h3>
+                    <form id="comment-form">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="comment-name">Nombre / Empresa</label>
+                                <input type="text" id="comment-name" required placeholder="Ej. Taller Mecánico Falcón C.A.">
+                            </div>
+                            <div class="input-group">
+                                <label>Calificación</label>
+                                <div class="star-rating" id="star-rating">
+                                    <i class="fa-regular fa-star" data-rating="1"></i>
+                                    <i class="fa-regular fa-star" data-rating="2"></i>
+                                    <i class="fa-regular fa-star" data-rating="3"></i>
+                                    <i class="fa-regular fa-star" data-rating="4"></i>
+                                    <i class="fa-regular fa-star" data-rating="5"></i>
+                                </div>
+                                <input type="hidden" id="comment-rating" value="5">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="comment-text">Mensaje</label>
+                            <textarea id="comment-text" required rows="4" placeholder="Excelente atención en rodamientos SKF..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Comentario</button>
+                    </form>
+                </div>
+
+                <!-- Customer Comments Wall -->
+                <div class="comments-wall">
+                    <h3>Muro de Opiniones</h3>
+                    <div class="comments-list" id="comments-list">
+                        <!-- Loaded dynamically from app.js -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacts -->
+    <footer id="contact" class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-area">
+                    <img src="logo.jpg" alt="Rotaribomba C.A. Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-title">ROTARI<span>SUPPLY</span></span>
+                        <span class="logo-tagline">Sucursal de Rotaribomba C.A.</span>
+                    </div>
+                </div>
+                <p class="footer-desc">Proveedores especializados de rodamientos de precisión, sellos mecánicos y materiales metalmecánicos certificados con envíos directos.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-info">
+                <h3>Contacto de Ventas</h3>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-user"></i>
+                        <span>Luis Alvarez (Dpto. Ventas)</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0412-1062612</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp text-success"></i>
+                        <a href="https://wa.me/584121062612" target="_blank" class="contact-link">Iniciar Chat de WhatsApp</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Punto Fijo, Estado Falcón, Venezuela</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h3>Horario de Atención</h3>
+                <p>Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+                <p>Sábados: 8:00 AM - 1:00 PM</p>
+                <div class="footer-badge">
+                    <i class="fa-solid fa-box-open"></i> Envíos a nivel nacional
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Rotari-Supply. Todos los derechos reservados. Punto Fijo, Falcón, Venezuela.</p>
+        </div>
+    </footer>
+
+    <!-- Glassmorphic Shopping Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Tu Cotización</h3>
+            <button class="close-cart-btn" id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-content">
+            <div id="cart-empty-msg" class="cart-empty">
+                <i class="fa-solid fa-folder-open"></i>
+                <p>No tienes artículos agregados para cotizar.</p>
+            </div>
+            <div class="cart-items-list" id="cart-items-list">
+                <!-- Cart items added here -->
+            </div>
+        </div>
+        <div class="cart-drawer-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <span>Total Artículos:</span>
+                <span id="cart-total-qty">0</span>
+            </div>
+            <button class="btn btn-whatsapp btn-block" id="send-whatsapp-quote">
+                <i class="fa-brands fa-whatsapp"></i> Enviar a Luis Alvarez (Ventas)
+            </button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Artículo agregado a la cotización.</div>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>
